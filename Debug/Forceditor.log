@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Forceditor (Thetatron's conflicted copy 2015-12-04).vcxproj, Forceditor.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  systemCheck.cpp
+v:\projects\texedit\forceditor\forceditor\systemcheck.cpp(37): warning C4800: 'BOOL': forcing value to bool 'true' or 'false' (performance warning)
+v:\projects\texedit\forceditor\forceditor\systemcheck.cpp(42): warning C4800: 'BOOL': forcing value to bool 'true' or 'false' (performance warning)
+v:\projects\texedit\forceditor\forceditor\systemcheck.cpp(34): warning C4715: 'chkWinVer': not all control paths return a value
+  Forceditor.vcxproj -> V:\Projects\texEdit\Forceditor\Debug\texEdit.exe

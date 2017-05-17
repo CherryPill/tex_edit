@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A08E1F29-6C1B-49B6-9FFF-7FFCEF121721}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>texEdit</RootNamespace>
+    <ProjectName>texEdit</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;comctl32.lib;Secur32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aboutDialog.cpp" />
+    <ClCompile Include="appconst.cpp" />
+    <ClCompile Include="chkModule.cpp" />
+    <ClCompile Include="clipboardOps.cpp" />
+    <ClCompile Include="contextMenu.cpp" />
+    <ClCompile Include="fileIO.cpp" />
+    <ClCompile Include="getLastError.cpp" />
+    <ClCompile Include="globalVars.cpp" />
+    <ClCompile Include="inAppPrefs.cpp" />
+    <ClCompile Include="inputLangChange.cpp" />
+    <ClCompile Include="license.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainEditControl.cpp" />
+    <ClCompile Include="mainEditUtils.cpp" />
+    <ClCompile Include="mainMenu.cpp" />
+    <ClCompile Include="menuUtils.cpp" />
+    <ClCompile Include="mainPrefs.cpp" />
+    <ClCompile Include="mainWindowProc.cpp" />
+    <ClCompile Include="prefsDialog.cpp" />
+    <ClCompile Include="recentFiles.cpp" />
+    <ClCompile Include="richEditProc.cpp" />
+    <ClCompile Include="service.cpp" />
+    <ClCompile Include="settingsDialog.cpp" />
+    <ClCompile Include="splashScreen.cpp" />
+    <ClCompile Include="statusControl.cpp" />
+    <ClCompile Include="stdDialogBoxes.cpp" />
+    <ClCompile Include="systemCheck.cpp" />
+    <ClCompile Include="timeDate.cpp" />
+    <ClCompile Include="toolBarControl.cpp" />
+    <ClCompile Include="toolTip.cpp" />
+    <ClCompile Include="translations.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="texEdit.manifest">
+      <SubType>Designer</SubType>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aboutDialog.h" />
+    <ClInclude Include="appconst.h" />
+    <ClInclude Include="chkModule.h" />
+    <ClInclude Include="clipboardOps.h" />
+    <ClInclude Include="contextMenu.h" />
+    <ClInclude Include="editcontrol.h" />
+    <ClInclude Include="fileIO.h" />
+    <ClInclude Include="getLastError.h" />
+    <ClInclude Include="globalVars.h" />
+    <ClInclude Include="hotkeys.h" />
+    <ClInclude Include="inAppPrefs.h" />
+    <ClInclude Include="inputLangChange.h" />
+    <ClInclude Include="license.h" />
+    <ClInclude Include="mainEditControl.h" />
+    <ClInclude Include="mainEditUtils.h" />
+    <ClInclude Include="mainMenu.h" />
+    <ClInclude Include="menuUtils.h" />
+    <ClInclude Include="mainPrefs.h" />
+    <ClInclude Include="mainWindowProc.h" />
+    <ClInclude Include="menuids.h" />
+    <ClInclude Include="nonMenuids.h" />
+    <ClInclude Include="prefsDialog.h" />
+    <ClInclude Include="recentFiles.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="richEditProc.h" />
+    <ClInclude Include="service.h" />
+    <ClInclude Include="settingsDialog.h" />
+    <ClInclude Include="settingsIDs.h" />
+    <ClInclude Include="splashScreen.h" />
+    <ClInclude Include="statusControl.h" />
+    <ClInclude Include="stdDialogBoxes.h" />
+    <ClInclude Include="stdincld.h" />
+    <ClInclude Include="systemCheck.h" />
+    <ClInclude Include="timeDate.h" />
+    <ClInclude Include="toolbarControl.h" />
+    <ClInclude Include="toolbarIDs.h" />
+    <ClInclude Include="toolTip.h" />
+    <ClInclude Include="translationconsts.h" />
+    <ClInclude Include="translations.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="systemRequirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="texEdit.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Debug\icons\system\gear.ico" />
+    <Image Include="..\Debug\icons\system\texEditIcon32x32.ico" />
+    <Image Include="C:\Users\Theta1\Desktop\closeIcon.ico" />
+    <Image Include="C:\Users\Theta1\Desktop\saveIcon.ico" />
+    <Image Include="icons\langFlags\ru.ico" />
+    <Image Include="icons\langFlags\USA.ico" />
+    <Image Include="icons\system\gear.ico" />
+    <Image Include="icons\system\texEditIcon32x32.ico" />
+    <Image Include="icons\toolbar\stdpack\docNew.ico" />
+    <Image Include="icons\toolbar\stdpack\docOpen.ico" />
+    <Image Include="icons\toolbar\stdpack\docPrint.ico" />
+    <Image Include="icons\toolbar\stdpack\docSave.ico" />
+    <Image Include="icons\toolbar\stdpack\insImage.ico" />
+    <Image Include="icons\toolbar\stdpack\justifyCenter.ico" />
+    <Image Include="icons\toolbar\stdpack\justifyLeft.ico" />
+    <Image Include="icons\toolbar\stdpack\justifyRight.ico" />
+    <Image Include="icons\toolbar\stdpack\styleBold.ico" />
+    <Image Include="icons\toolbar\stdpack\styleColor.ico" />
+    <Image Include="icons\toolbar\stdpack\styleFont.ico" />
+    <Image Include="icons\toolbar\stdpack\styleItalic.ico" />
+    <Image Include="icons\toolbar\stdpack\underlined.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,14 @@
+bConfirmExit=0
+bShowCompleteFilePathInTitle=1
+bFirstLaunch=1
+bSplashScreen=1
+bToolbarActive=1
+bToolbarText=1
+bDetectLinks=0
+bStartFullScr=0
+bRememberLastSizeByUser=1
+iUsrLastWidth=825
+iUsrLastHeight=570
+iUsrLastXPos=404
+iUsrLastYPos=158
+bOverrideSettings=0

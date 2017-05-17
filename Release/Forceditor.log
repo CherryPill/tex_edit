@@ -1,0 +1,28 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (Forceditor.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  aboutDialog.cpp
+  mainWindowProc.cpp
+v:\projects\texedit\forceditor\forceditor\menuids.h(38): warning C4005: 'IDC_ABOUT_ABOUT_OK': macro redefinition
+  v:\projects\texedit\forceditor\forceditor\resource1.h(25): note: see previous definition of 'IDC_ABOUT_ABOUT_OK'
+mainWindowProc.cpp(519): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\ucrt\corecrt_wstring.h(121): note: see declaration of 'wcscpy'
+mainWindowProc.cpp(520): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\ucrt\corecrt_wstring.h(121): note: see declaration of 'wcscpy'
+mainWindowProc.cpp(562): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\ucrt\corecrt_wstring.h(121): note: see declaration of 'wcscpy'
+  settingsDialog.cpp
+v:\projects\texedit\forceditor\forceditor\resource1.h(22): warning C4005: 'IDI_ICON2': macro redefinition
+  v:\projects\texedit\forceditor\forceditor\resource.h(8): note: see previous definition of 'IDI_ICON2'
+settingsDialog.cpp(655): warning C4805: '!=': unsafe mix of type 'UINT' and type 'bool' in operation
+settingsDialog.cpp(657): warning C4800: 'UINT': forcing value to bool 'true' or 'false' (performance warning)
+settingsDialog.cpp(662): warning C4800: 'UINT': forcing value to bool 'true' or 'false' (performance warning)
+settingsDialog.cpp(670): warning C4800: 'UINT': forcing value to bool 'true' or 'false' (performance warning)
+settingsDialog.cpp(677): warning C4800: 'UINT': forcing value to bool 'true' or 'false' (performance warning)
+settingsDialog.cpp(682): warning C4800: 'UINT': forcing value to bool 'true' or 'false' (performance warning)
+settingsDialog.cpp(688): warning C4800: 'UINT': forcing value to bool 'true' or 'false' (performance warning)
+settingsDialog.cpp(694): warning C4800: 'UINT': forcing value to bool 'true' or 'false' (performance warning)
+  Generating code
+  0 of 903 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Forceditor.vcxproj -> V:\Projects\texEdit\Forceditor\Release\texEdit.exe

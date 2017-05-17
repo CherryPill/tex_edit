@@ -1,0 +1,14 @@
+Minimum:
+OS: Windows Vista x86/x64
+RAM: 16MB
+HDD: 300KB
+
+Recommended:
+OS: Windows 7+ x86/x64
+RAM: 64MB
+HDD: 300KB
+
+Caution
+Does not run on anything below Vista including XP, 2K, ME and 98
+
+Additional dependencies: VC++ Redist 2013
