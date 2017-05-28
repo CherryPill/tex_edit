@@ -107,7 +107,6 @@
     <ClCompile Include="menuUtils.cpp" />
     <ClCompile Include="mainPrefs.cpp" />
     <ClCompile Include="mainWindowProc.cpp" />
-    <ClCompile Include="prefsDialog.cpp" />
     <ClCompile Include="recentFiles.cpp" />
     <ClCompile Include="richEditProc.cpp" />
     <ClCompile Include="service.cpp" />
@@ -148,7 +147,6 @@
     <ClInclude Include="mainWindowProc.h" />
     <ClInclude Include="menuids.h" />
     <ClInclude Include="nonMenuids.h" />
-    <ClInclude Include="prefsDialog.h" />
     <ClInclude Include="recentFiles.h" />
     <ClInclude Include="resource1.h" />
     <ClInclude Include="richEditProc.h" />

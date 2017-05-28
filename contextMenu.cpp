@@ -41,18 +41,15 @@ void createContextMenu(HWND mainWindow, LPARAM coords)
 	
 	DestroyMenu(contextMenu);
 }
-void getCurrSelStatus(HMENU contextHandle)
-{
+void getCurrSelStatus(HMENU contextHandle) {
 	contextMenuState.cbSize = sizeof(MENUITEMINFO);
 	ZeroMemory(&contextMenuState,sizeof(MENUITEMINFO));
 	enum menuItems {right=IDM_JUSTIFY_RIGHT, center, left, bold, italic, underlined};
-	for (register int x = right; x <= underlined; x++)
-	{
+	for (register int x = right; x <= underlined; x++) {
 		menuState.fMask = MIIM_STATE;
 		GetMenuItemInfo(menuBar, x, false, (LPMENUITEMINFO)&menuState);
 		SetMenuItemInfo(contextHandle, x, false, (LPMENUITEMINFO)&menuState);
-		if (x < bold)
-		{
+		if (x < bold) {
 			menuState.fMask = MIIM_FTYPE;
 			menuState.fType = MFT_RADIOCHECK;
 			GetMenuItemInfo(menuBar, x, false, (LPMENUITEMINFO)&menuState);
