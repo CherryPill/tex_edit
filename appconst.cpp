@@ -17,7 +17,7 @@ TCHAR *settingsDialogCaption = _T("TexEdit - Settings");
 //initial window size (default)
 WPARAM splashScreenWidth = 350;
 WPARAM splashScreenHeight = 350;
-WPARAM wpInitWidth{ 700 }; 
+WPARAM wpInitWidth{ 800 }; 
 WPARAM wpInitHeight{ 500 };
 WPARAM screenWidth = GetSystemMetrics(SM_CXSCREEN);
 WPARAM screenHeight = GetSystemMetrics(SM_CYSCREEN);

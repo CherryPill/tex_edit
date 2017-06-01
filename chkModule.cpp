@@ -1,12 +1,9 @@
 #include "globalVars.h"
-bool chkIfFileLoaded(void)
-{
-	if (fileLoaded)
-	{
+bool chkIfFileLoaded(void) {
+	if (fileLoaded) {
 		return true;
 	}
-	else
-	{
+	else {
 		false;
 	}
 

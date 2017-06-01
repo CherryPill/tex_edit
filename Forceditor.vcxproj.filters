@@ -44,13 +44,7 @@
     <ClCompile Include="splashScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="inAppPrefs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="settingsDialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="richEditProc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="toolBarControl.cpp">
@@ -93,9 +87,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="timeDate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="license.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="inputLangChange.cpp">
@@ -152,9 +143,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="settingsIDs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="richEditProc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="toolbarControl.h">

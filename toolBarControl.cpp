@@ -7,8 +7,7 @@
 #include "toolbarIDs.h"
 #include "menuids.h"
 #include "resource1.h"
-void createToolbar(HWND hwnd)
-{
+void createToolbar(HWND hwnd) {
 	INITCOMMONCONTROLSEX icex;           // Structure for control initialization. ensuring the commctrl dll is loaded
 	InitCommonControlsEx(&icex);
 	toolBar = CreateWindowEx(
@@ -28,8 +27,7 @@ void createToolbar(HWND hwnd)
 	SendMessage(toolBar, TB_AUTOSIZE, 0, 0);
 	//SendMessage(toolBar,TB_BUTTONSTRUCTSIZE,(WPARAM)sizeof(TBBUTTON),0);
 }
-void fillToolbar(HWND hwnd)
-{
+void fillToolbar(HWND hwnd) {
 	const int imageList = 0;
 	const int numButtons = 4+6+1+1+1; //sys + formatting
 	const int bitmapSize = 16;
@@ -92,10 +90,8 @@ void fillToolbar(HWND hwnd)
 		{ MAKELONG(STD_FIND, 0), IDT_SAVE, 0, toolbarStyle, { 0 }, 0, (INT_PTR)_T("Save") }
 		{ MAKELONG(STD_FIND, 0), IDT_SAVE, 0, toolbarStyle, { 0 }, 0, (INT_PTR)_T("Save") }*/
 	};
-	if (!settings.bToolbarText)
-	{
-		for (register int x = 0; x < numButtons; x++)
-		{
+	if (!settings.bToolbarText) {
+		for (register int x = 0; x < numButtons; x++) {
 			tbButtons[x].iString = NULL;
 		}
 	}
@@ -106,13 +102,9 @@ void fillToolbar(HWND hwnd)
 	ShowWindow(toolBar, TRUE);
 	disableFastSaveIcon();
 }
-void disableFormattingOptions(void)
-{
+void disableFormattingOptions(void) {
 		//toolbar
 		//TODO: ENUMERATE
-
-
-
 	SendMessage(toolBar, TB_ENABLEBUTTON, IDM_INS_PIC, false);
 	SendMessage(toolBar, TB_INDETERMINATE, IDM_INS_PIC, true);
 
@@ -153,8 +145,7 @@ void disableFormattingOptions(void)
 	ModifyMenu(menuBar, IDM_STYLE_FONT, MF_BYCOMMAND | MF_DISABLED, IDM_STYLE_FONT, _T("&Font"));
 	ModifyMenu(menuBar, IDM_STYLE_COLOR, MF_BYCOMMAND | MF_DISABLED, IDM_STYLE_COLOR, _T("&Color"));
 	}
-void enableFormattingOptions(void)
-{
+void enableFormattingOptions(void) {
 	//toolbar
 	SendMessage(toolBar, TB_ENABLEBUTTON, IDM_JUSTIFY_RIGHT, true);
 	SendMessage(toolBar, TB_INDETERMINATE, IDM_JUSTIFY_RIGHT, false);
@@ -193,13 +184,11 @@ void enableFormattingOptions(void)
 	ModifyMenu(menuBar, IDM_STYLE_FONT, MF_BYCOMMAND | MF_ENABLED, IDM_STYLE_FONT, _T("&Font"));
 	ModifyMenu(menuBar, IDM_STYLE_COLOR, MF_BYCOMMAND | MF_ENABLED, IDM_STYLE_COLOR, _T("&Color"));
 	}
-void disableFastSaveIcon(void)
-{
+void disableFastSaveIcon(void) {
 	SendMessage(toolBar, TB_ENABLEBUTTON, IDM_FILE_SAVE, false);
 	SendMessage(toolBar, TB_INDETERMINATE, IDM_FILE_SAVE, true);
 }
-void enableFastSaveIcon(void)
-{
+void enableFastSaveIcon(void) {
 	SendMessage(toolBar, TB_ENABLEBUTTON, IDM_FILE_SAVE, true);
 	SendMessage(toolBar, TB_INDETERMINATE, IDM_FILE_SAVE, false);
 }

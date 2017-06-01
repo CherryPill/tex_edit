@@ -97,9 +97,7 @@
     <ClCompile Include="fileIO.cpp" />
     <ClCompile Include="getLastError.cpp" />
     <ClCompile Include="globalVars.cpp" />
-    <ClCompile Include="inAppPrefs.cpp" />
     <ClCompile Include="inputLangChange.cpp" />
-    <ClCompile Include="license.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainEditControl.cpp" />
     <ClCompile Include="mainEditUtils.cpp" />
@@ -108,7 +106,6 @@
     <ClCompile Include="mainPrefs.cpp" />
     <ClCompile Include="mainWindowProc.cpp" />
     <ClCompile Include="recentFiles.cpp" />
-    <ClCompile Include="richEditProc.cpp" />
     <ClCompile Include="service.cpp" />
     <ClCompile Include="settingsDialog.cpp" />
     <ClCompile Include="splashScreen.cpp" />
@@ -149,7 +146,6 @@
     <ClInclude Include="nonMenuids.h" />
     <ClInclude Include="recentFiles.h" />
     <ClInclude Include="resource1.h" />
-    <ClInclude Include="richEditProc.h" />
     <ClInclude Include="service.h" />
     <ClInclude Include="settingsDialog.h" />
     <ClInclude Include="settingsIDs.h" />

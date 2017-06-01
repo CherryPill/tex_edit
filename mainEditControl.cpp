@@ -7,7 +7,7 @@
 #include "globalVars.h"
 #include "settingsDialog.h"
 #include "stdDialogBoxes.h"
-#include "richEditProc.h"
+
 #include "statusControl.h"
 #include "toolbarControl.h"
 #include <Richedit.h>

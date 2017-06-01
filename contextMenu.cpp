@@ -2,18 +2,15 @@
 #include "globalVars.h"
 #include "menuids.h"
 #include "contextMenu.h"
-void createContextMenu(HWND mainWindow, LPARAM coords)
-{
+void createContextMenu(HWND mainWindow, LPARAM coords) {
 	HMENU contextMenu;
 	POINT point;
 	UINT STYLE_FLAG, STYLE_FLAG_ADD;
 	//insert for file loading
-	if (OPENMODE==1)
-	{
+	if (OPENMODE==1) {
 		STYLE_FLAG = MF_GRAYED;
 	}
-	else
-	{
+	else {
 		STYLE_FLAG = MF_STRING;
 	}
 	contextMenu = CreatePopupMenu();

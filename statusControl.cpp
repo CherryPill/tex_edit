@@ -6,8 +6,7 @@
 #include "statusControl.h"
 #include  "resource1.h"
 #include <commctrl.h>
-TCHAR *statusControlMessages[] =
-{ 
+TCHAR *statusControlMessages[] = { 
 					_T("Ready"),
 					_T("File loaded"),
 					_T("File saved"),
@@ -15,8 +14,7 @@ TCHAR *statusControlMessages[] =
 					_T("File not saved"),
 					_T("Snoozing...")
 };
-void createStatusControl(HWND mainWindow)
-{
+void createStatusControl(HWND mainWindow) {
 	TCHAR lang[129];
 	staticImageUSA_active = (HICON)LoadImage(ghInstance, MAKEINTRESOURCE(IDI_ICON1), IMAGE_ICON, 16, 16, LR_VGACOLOR);
 	staticImageRU_active = (HICON)LoadImage(ghInstance, MAKEINTRESOURCE(IDI_ICON2), IMAGE_ICON, 16, 16, LR_VGACOLOR);
@@ -55,8 +53,7 @@ void createStatusControl(HWND mainWindow)
 	
 	//index is missing because the adjacent empty space is considered a part for w/e reason
 }
-void resizeStatusControl(void)
-{
+void resizeStatusControl(void) {
 	SendMessage(statusBar, WM_SIZE, 0, 0);
 	SendMessage(toolBar,TB_AUTOSIZE, 0, 0);
 
@@ -75,8 +72,7 @@ void resizeStatusControl(void)
 }
 //todo make static text into separate toolbar parts to avoid memory hogging
 //10% increment
-void changeZoomPartText(void)
-{
+void changeZoomPartText(void) {
 	TCHAR value[16];
 	TCHAR text[8];
 	TCHAR complete[48];
@@ -92,8 +88,7 @@ void changeZoomPartText(void)
 	_tcscat(complete,value);
 	SendMessage(statusBar, SB_SETTEXT, 1 | 0, (LPARAM)complete);
 }
-void changeStatusControlMessage(int msgCode)
-{
+void changeStatusControlMessage(int msgCode) {
 	//TONEVERDO delete
 	//if (msgCode == 4)
 	//{
@@ -105,8 +100,7 @@ void changeStatusControlMessage(int msgCode)
 	}
 }
 //experimental
-void paintStatusSaveWarning(void)
-{
+void paintStatusSaveWarning(void) {
 	RECT dims;
 	HDC deviceContext = GetDC(statusBar);
 	GetClientRect(statusBar,&dims);
@@ -115,26 +109,20 @@ void paintStatusSaveWarning(void)
 	DrawText(deviceContext,statusControlMessages[4],-1,&dims,DT_SINGLELINE|DT_NOCLIP);
 	ReleaseDC(statusBar, deviceContext);
 }
-void changeLangPartIcon(TCHAR *kbdLayOut)
-{
+void changeLangPartIcon(TCHAR *kbdLayOut) {
 	HICON iconToSet;
-	if (!_tcscmp(kbdLayOut, _T("English (U.S.)")))
-	{
+	if (!_tcscmp(kbdLayOut, _T("English (U.S.)"))) {
 		iconToSet = staticImageUSA_active;
 	}
-	else if(!_tcscmp(kbdLayOut, _T("Russian")))
-	{
+	else if(!_tcscmp(kbdLayOut, _T("Russian"))) {
 		iconToSet = staticImageRU_active;
 	}
 	SendMessage(statusBar, SB_SETICON, 2 | 0, (LPARAM)iconToSet);
 }
-void changeLangPartText(TCHAR* kbdLayOut)
-{
+void changeLangPartText(TCHAR* kbdLayOut) {
 	SendMessage(statusBar, SB_SETTEXT, 2 | 0, (LPARAM)kbdLayOut);
 }
-void changeLinePartText(void)
-{
-
+void changeLinePartText(void) {
 	TCHAR lineIndexStrFull[20];
 	TCHAR lineIndexDigits[12];
 
@@ -151,8 +139,7 @@ void changeLinePartText(void)
 	//TODO also do get the number of lines in the edit control
 }
 //characters in richedit
-void changeCharPartText(void)
-{
+void changeCharPartText(void) {
 	//TODO use a global variable to store the current number of characters, remove -2 characters worth of \r\n whitespace
 	GETTEXTLENGTHEX textLengthStruct;
 	UINT64 docLength = 0;
@@ -174,5 +161,5 @@ void changeCharPartText(void)
 //words in richedit
 void changeWordPartText(void)
 {
-	
+	//stub
 }
