@@ -235,20 +235,17 @@ void writeChkBoxesState(HWND dialogHandle)
 
 
 }
-void createMainTabArea(HWND settingsDialog)
-{ 
+void createMainTabArea(HWND settingsDialog) { 
 	const WPARAM headerCount = 5;
 	TCITEM tabData;
-	TCHAR *tabHeaderTxt[headerCount] = 
-	{
+	TCHAR *tabHeaderTxt[headerCount] = {
 			_T("General"),
 			_T("Interface"),
 			_T("Editor"),
 			_T("Keybindings"),
 			_T("Advanced"),
 	};
-	dialogTabControl = CreateWindowEx
-	(
+	dialogTabControl = CreateWindowEx(
 			0,
 			WC_TABCONTROL,
 			NULL,
@@ -261,31 +258,25 @@ void createMainTabArea(HWND settingsDialog)
 			NULL,
 			NULL
 	);
-	for (WPARAM x = 0;x<headerCount;x++)
-	{
+	for (WPARAM x = 0;x<headerCount-2;x++) {
 		tabData.mask = TCIF_TEXT;
 		tabData.pszText = tabHeaderTxt[x];
 		SendMessage(dialogTabControl,TCM_INSERTITEM,x,(LPARAM)&tabData);
 	}
 }
-void createStatusbarBlock(HWND parentWindow, RECT dimensions)
-{
-	
+void createStatusbarBlock(HWND parentWindow, RECT dimensions) {
+	//stub
 }
-void createMiscBlock_p1(HWND parentWindow, RECT dimensions)
-{
-	
+void createMiscBlock_p1(HWND parentWindow, RECT dimensions) {
+	//stub
 }
-void createKBindsBlock(HWND parentWindow, RECT dimensions)
-{
-
+void createKBindsBlock(HWND parentWindow, RECT dimensions) {
+	//stub
 }
-void createBoilerBlock(HWND parentWindow, RECT dimensions)
-{
-	
+void createBoilerBlock(HWND parentWindow, RECT dimensions) {
+	//stub
 }
-void createEditorBlock(HWND parentWindow,RECT dimensions)
-{
+void createEditorBlock(HWND parentWindow,RECT dimensions) {
 	CreateWindowEx(0, _T("Button"), _T("Editor"),
 		WS_CHILD | 
 		WS_VISIBLE | 
@@ -321,7 +312,7 @@ void createEditorBlock(HWND parentWindow,RECT dimensions)
 		NULL);
 
 
-
+	//do not delete
 	/*INITCOMMONCONTROLSEX icex;           // Structure for control initialization. ensuring the commctrl dll is loaded
 	InitCommonControlsEx(&icex);
 	combo = CreateWindowEx(0, WC_COMBOBOXEX, NULL,
